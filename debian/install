@@ -1,0 +1,8 @@
+nightbird.desktop		usr/share/applications
+debian/icons/16/nightbird.png  	usr/share/icons/hicolor/16x16/apps
+debian/icons/32/nightbird.png  	usr/share/icons/hicolor/32x32/apps
+debian/icons/48/nightbird.png  	usr/share/icons/hicolor/48x48/apps
+debian/icons/64/nightbird.png  	usr/share/icons/hicolor/64x64/apps
+debian/icons/128/nightbird.png  usr/share/icons/hicolor/128x128/apps
+debian/icons/256/nightbird.png 	usr/share/icons/hicolor/256x256/apps
+debian/icons/scalable/nightbird.svg usr/share/icons/hicolor/scalable/apps

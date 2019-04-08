@@ -1,0 +1,4 @@
+debian/nightbird
+debian/files
+debian/debhelper-build-stamp
+
