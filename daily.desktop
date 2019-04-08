@@ -2,7 +2,7 @@
 Name=Thunderbird
 Comment=Read/Write Mail/News with Thunderbird
 GenericName=Mail Client
-Exec=/opt/thunderbird/thunderbird %u
+Exec=/opt/daily/thunderbird %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application

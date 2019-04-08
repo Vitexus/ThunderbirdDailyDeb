@@ -1,4 +1,4 @@
-debian/nightbird
+debian/daily
 debian/files
 debian/debhelper-build-stamp
 

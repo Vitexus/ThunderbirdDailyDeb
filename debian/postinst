@@ -1,14 +1,15 @@
 #!/bin/sh -e
 
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] ; then
+    echo configure
 fi
 
 if [ -f /usr/bin/xdg-desktop-menu ]; then
-    xdg-desktop-menu install --novendor /usr/share/applications/nightbird.desktop > /dev/null || true
+    xdg-desktop-menu install --novendor /usr/share/applications/daily.desktop > /dev/null || true
 fi
 
 
 if [ "$1" = "configure" ] ; then
-    chmod g+rwX /opt/thunderbird -R
-    chgrp users /opt/thunderbird -R
+    chmod g+rwX /opt/daily -R
+    chgrp users /opt/daily -R
 fi

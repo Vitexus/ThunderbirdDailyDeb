@@ -13,4 +13,4 @@ dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
 echo "deb file:/vagrant/deb ./" > /etc/apt/sources.list.d/local.list
 apt-get update
 export DEBCONF_DEBUG="developer"
-apt-get -y --allow-unauthenticated install nightbird
+apt-get -y --allow-unauthenticated install daily

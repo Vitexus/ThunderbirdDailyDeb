@@ -13,12 +13,14 @@ echo "Current Language is ⁝$LANG⁝ = ⁝$LANGCODE⁝"
 
 archs=`uname -m`
 case "$archs" in
-    i?86) archs="linux32" ;;
-    x86_64) archs="linux64" ;;
-    armel) archs="linuxarmel" ;;
+    i?86) archs="i686" ;;
+    x86_64) archs="x86_64" ;;
+#    armel) archs="linuxarmel" ;;
 esac
 
-wget "https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=${archs}&lang=${LANGCODE}" -O $TMPFILE
+VERSION=`curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' |  cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1`
+
+wget "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.bz2" -O $TMPFILE
 cd /tmp
 mkdir -p $DESTDIR
 tar xjvf $TMPFILE -C $DESTDIR --strip-components=1

@@ -1,7 +1,7 @@
-Thunderbird Nightly installer package for Debian / Ubuntu
-=====================================================
+Thunderbird daily installer package for Debian / Ubuntu
+=======================================================
 
-![ThunderbirdNightly](https://raw.githubusercontent.com/Vitexus/ThunderbirdNightlyDeb/master/nightbird.png "Nightly logo")
+![ThunderbirdNightly](https://raw.githubusercontent.com/Vitexus/ThunderbirdNightlyDeb/master/daily.png "Nightly logo")
 
 Thunderbird Nightly gets a new version every day and as a consequence, the release notes for the Nightly channel are updated continuously to reflect features that have reached sufficient maturity to benefit from community feedback and bug reports. Features listed here may or may not make a final release of Thunderbird.
 
@@ -17,9 +17,9 @@ Building package
 Installation
 ------------
 
-Download from https://www.vitexsoftware.cz/pool/main/n/nightbird/nightbird_68.0a1_all.deb or Build package. Then install:
+Download from https://www.vitexsoftware.cz/pool/main/d/daily/daily_68.0a1_all.deb or Build package. Then install:
 
-    gdebi nightbird_68.0a1_all.deb
+    gdebi daily_68.0a1_all.deb
 
 
 Or you can use repo:
