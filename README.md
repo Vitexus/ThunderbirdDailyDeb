@@ -1,7 +1,7 @@
 Thunderbird Nightly installer package for Debian / Ubuntu
 =====================================================
 
-![ThunderbirdNightly](https://raw.githubusercontent.com/Vitexus/ThunderbirdNightlyDeb/master/nightly.png "Nightly logo")
+![ThunderbirdNightly](https://raw.githubusercontent.com/Vitexus/ThunderbirdNightlyDeb/master/nightbird.png "Nightly logo")
 
 Thunderbird Nightly gets a new version every day and as a consequence, the release notes for the Nightly channel are updated continuously to reflect features that have reached sufficient maturity to benefit from community feedback and bug reports. Features listed here may or may not make a final release of Thunderbird.
 
