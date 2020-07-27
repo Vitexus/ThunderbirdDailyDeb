@@ -9,18 +9,20 @@ Thunderbird Nightly gets a new version every day and as a consequence, the relea
 Building package
 ----------------
 
+```shell  
     apt-get -y install devscripts dpkg-dev
     git clone https://github.com/Vitexus/ThunderbirdDailyDeb.git
     debuild -i -us -uc -b
-
+```
 
 Installation
 ------------
 
-Download from https://www.vitexsoftware.cz/pool/main/d/daily/daily_68.0a1_all.deb or Build package. Then install:
+Download from http://repo.vitexsoftware.cz/pool/buster/main/n/nightly/ or Build package. Then install:
 
-    gdebi daily_68.0a1_all.deb
-
+```shell
+    gdebi daily_80.0a1_all.deb
+```
 
 Or you can use repo:
 
@@ -32,3 +34,4 @@ sudo apt update
 sudo apt install daily
 ```
 
+![About Window](thunderbird-daily-about.png?raw=true "About")
