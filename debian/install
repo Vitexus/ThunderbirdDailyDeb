@@ -5,3 +5,5 @@ debian/icons/48/daily.png  	usr/share/icons/hicolor/48x48/apps
 debian/icons/64/daily.png  	usr/share/icons/hicolor/64x64/apps
 debian/icons/128/daily.png 	usr/share/icons/hicolor/128x128/apps
 debian/icons/256/daily.png 	usr/share/icons/hicolor/256x256/apps
+debian/io.github.vitexus.thunderbird_daily.metainfo.xml /usr/share/metainfo
+
