@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.vitexus.thunderbird_daily</id>
+  
+  <name>Thunderbird Daily</name>
+  <summary>Still Fresh editon of well known email client</summary>
+  
+  <metadata_license>FTL</metadata_license>
+  <project_license>MPL-1.0</project_license>
+  
+  <description>
+    <p>
+      Mailing client by Mozilla
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">daily.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/daily.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/thunderbird-daily-about.png</image>
+    </screenshot>
+  </screenshots>
+</component>
+
