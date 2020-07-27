@@ -22,4 +22,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
+        releaseId: '80.0a1'
         args: '*.deb'
