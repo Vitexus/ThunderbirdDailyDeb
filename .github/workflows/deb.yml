@@ -17,3 +17,8 @@ jobs:
       uses: dawidd6/action-debian-package@v1.0.1
     - name: github-action-publish-binaries
       uses: skx/github-action-publish-binaries@release-0.14
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        releaseId: ${{ needs.create_release.outputs.id }}
+        args: '*.deb'
