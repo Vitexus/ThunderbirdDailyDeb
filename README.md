@@ -35,3 +35,5 @@ sudo apt install daily
 ```
 
 ![About Window](thunderbird-daily-about.png?raw=true "About")
+
+See also: https://github.com/Vitexus/FirefoxNightlyDeb https://github.com/VitexSoftware/FirefoxDevelEditionDeb
