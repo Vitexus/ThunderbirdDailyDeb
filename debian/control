@@ -9,7 +9,7 @@ Standards-Version: 3.9.2
 Package: daily
 Architecture: all
 Depends: debianutils (>= 1.16), fontconfig, psmisc, x11-utils, ${misc:Depends}, ${shlibs:Depends},curl
-Provides: mail-reader, icedove,
+Provides: mail-reader, thunderbird,
 Description: mail/news client with RSS, chat and integrated spam filter support
  Thunderbird is an mail client suitable for free distribution.
  It supports different mail accounts, no matter of the used protocol like
