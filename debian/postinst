@@ -10,6 +10,7 @@ fi
 
 
 if [ "$1" = "configure" ] ; then
+    mkdir -p /opt/daily
     chmod g+rwX /opt/daily -R
     chgrp users /opt/daily -R
 fi
