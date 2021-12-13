@@ -1,8 +1,12 @@
-daily (91.0a1+) UNRELEASED; urgency=medium
+daily (97.0a1+) UNRELEASED; urgency=medium
 
+  [ CyberVitexus ]
   * Jenkinsfile added
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Fri, 25 Jun 2021 23:33:01 +0200
+  [ vitex ]
+  * Current build
+
+ -- vitex <info@vitexsoftware.cz>  Mon, 13 Dec 2021 20:01:39 +0100
 
 daily (80.0a1) experimental; urgency=medium
 
