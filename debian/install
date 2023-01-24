@@ -1,4 +1,4 @@
-daily.desktop			usr/share/applications
+thunderbird-daily.desktop			usr/share/applications
 debian/icons/16/daily.png  	usr/share/icons/hicolor/16x16/apps
 debian/icons/32/daily.png  	usr/share/icons/hicolor/32x32/apps
 debian/icons/48/daily.png  	usr/share/icons/hicolor/48x48/apps
