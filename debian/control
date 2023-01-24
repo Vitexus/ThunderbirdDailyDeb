@@ -6,8 +6,9 @@ Uploaders: Vitex <vitex@hippy.cz>
 Homepage: https://github.com/Vitexus/ThunderbirdDailyDeb
 Standards-Version: 3.9.2
 
-Package: daily
+Package: thunderbird-daily
 Architecture: all
+Replaces: daily
 Depends: debianutils (>= 1.16), fontconfig, psmisc, x11-utils, ${misc:Depends}, ${shlibs:Depends},curl
 Provides: mail-reader, thunderbird,
 Description: mail/news client with RSS, chat and integrated spam filter support
