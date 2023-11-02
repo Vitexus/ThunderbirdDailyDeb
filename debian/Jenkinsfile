@@ -1,7 +1,9 @@
 #!groovy
 
-String[] architectures = []
-String[] distributions = ['debian:buster', 'debian:bullseye', 'debian:bookworm', 'ubuntu:focal', 'ubuntu:jammy']
+// Part of https://github.com/VitexSoftware/BuildImages
+
+String[] architectures = [] // 'amd64', 'aarch64', 'arm', 'i386'
+String[] distributions = ['debian:bullseye', 'debian:bookworm', 'ubuntu:focal', 'ubuntu:jammy']
 
 String vendor = 'vitexsoftware'
 String distribution = ''
@@ -56,11 +58,14 @@ architectures.each {
                 stage('Checkout ' + architecture + ' ' + distribution) {
                     buildImage = docker.image(vendor + '/' + distribution)
                     sh 'git checkout debian/changelog'
+
+# wget "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.bz2" -O $TMPFILE
+
                     def VERSION = sh(
-                        script: 'dpkg-parsechangelog --show-field Version',
+                        script: 'curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' |  cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1',
                         returnStdout: true
                     ).trim()
-                    ver = VERSION + '~' + distroCodename + '~' + env.BUILD_NUMBER
+                    ver = VERSION + '+.' + env.BUILD_NUMBER  + '~' + distroCodename
                 }
                 stage('Build ' + architecture + ' ' + distribution) {
                     buildImage.inside {
