@@ -1,4 +1,6 @@
 debian/daily
 debian/files
 debian/debhelper-build-stamp
-
+.debhelper/
+thunderbird-daily.substvars
+thunderbird-daily/
