@@ -1,5 +1,5 @@
 #!/bin/sh -e
-DESTDIR="/opt/daily"
+DESTDIR="/tmp/daily"
 TMPFILE="/tmp/thunderbird.tar.bz2"
 LANGCODE=`echo $LANG | awk -F_ '{print $1}'`
 
