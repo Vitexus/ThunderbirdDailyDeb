@@ -3,3 +3,11 @@
 %:
 	dh $@
 
+dh_auto_install:
+		VERSION=`curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' |  cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1`
+		mkdir -p debian/tmp
+		wget "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.bz2" -O debian/daily.tar.bz2
+		cd debian/tmp
+		tar xjvf debian/daily.tar.bz2 -C debian/tmp --strip-components=1
+		rm debian/daily.tar.bz2
+		dh_auto_install
