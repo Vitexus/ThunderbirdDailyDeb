@@ -23,5 +23,10 @@ VERSION=`curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm
 wget "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.bz2" -O $TMPFILE
 cd /tmp
 mkdir -p $DESTDIR
+rm -rf $DESTDIR/*
+ls -l $DESTDIR
 tar xjvf $TMPFILE -C $DESTDIR --strip-components=1
 rm $TMPFILE
+
+# End of debian/preinst
+
