@@ -5,7 +5,6 @@ Thunderbird daily installer package for Debian / Ubuntu
 
 Thunderbird Nightly gets a new version every day and as a consequence, the release notes for the Nightly channel are updated continuously to reflect features that have reached sufficient maturity to benefit from community feedback and bug reports. Features listed here may or may not make a final release of Thunderbird.
 
-
 Building package
 ----------------
 
@@ -21,7 +20,7 @@ Installation
 Download from [repo.vitexsoftware.com](https://repo.vitexsoftware.com/pool/main/d/daily/) or Build package. Then install:
 
 ```shell
-    apt install ./thunderbird-daily_*.deb
+apt install ./thunderbird-daily_*.deb
 ```
 
 Or you can use repo:
@@ -36,4 +35,4 @@ sudo apt install daily
 
 ![About Window](thunderbird-daily-about.png?raw=true "About")
 
-See also: https://github.com/Vitexus/FirefoxNightlyDeb https://github.com/VitexSoftware/FirefoxDevelEditionDeb
+See also: <https://github.com/Vitexus/FirefoxNightlyDeb> <https://github.com/VitexSoftware/FirefoxDevelEditionDeb>
