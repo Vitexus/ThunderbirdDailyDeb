@@ -16,3 +16,22 @@ if [ "$1" = "configure" ] ; then
     chmod g+rwX /opt/daily -R
     chgrp users /opt/daily -R
 fi
+
+
+mkdir -p /usr/share/icons/hicolor/16x16/apps
+cp /opt/daily/chrome/icons/default/default16.png  /usr/share/icons/hicolor/16x16/apps/daily.png
+mkdir -p /usr/share/icons/hicolor/22x22/apps
+cp /opt/daily/chrome/icons/default/default22.png  /usr/share/icons/hicolor/22x22/apps/daily.png
+mkdir -p /usr/share/icons/hicolor/24x24/apps
+cp /opt/daily/chrome/icons/default/default24.png  /usr/share/icons/hicolor/24x24/apps/daily.png
+mkdir -p /usr/share/icons/hicolor/32x32/apps
+cp /opt/daily/chrome/icons/default/default32.png  /usr/share/icons/hicolor/32x32/apps/daily.png
+mkdir -p /usr/share/icons/hicolor/48x48/apps
+cp /opt/daily/chrome/icons/default/default48.png  /usr/share/icons/hicolor/48x48/apps/daily.png
+mkdir -p /usr/share/icons/hicolor/64x64/apps
+cp /opt/daily/chrome/icons/default/default64.png  /usr/share/icons/hicolor/64x64/apps/daily.png
+mkdir -p /usr/share/icons/hicolor/128x128/apps
+cp /opt/daily/chrome/icons/default/default128.png /usr/share/icons/hicolor/128x128/apps/daily.png
+mkdir -p /usr/share/icons/hicolor/256x256/apps
+cp /opt/daily/chrome/icons/default/default256.png /usr/share/icons/hicolor/256x256/apps/daily.png
+

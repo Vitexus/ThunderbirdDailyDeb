@@ -18,18 +18,18 @@ Building package
 Installation
 ------------
 
-Download from http://repo.vitexsoftware.cz/pool/buster/main/n/nightly/ or Build package. Then install:
+Download from [repo.vitexsoftware.com](https://repo.vitexsoftware.com/pool/main/d/daily/) or Build package. Then install:
 
 ```shell
-    gdebi daily_80.0a1_all.deb
+    apt install ./thunderbird-daily_*.deb
 ```
 
 Or you can use repo:
 
 ```shell
 sudo apt install lsb-release wget apt-transport-https bzip2
-sudo wget -O /usr/share/keyrings/vitexsoftware.gpg https://repo.vitexsoftware.cz/keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/vitexsoftware.gpg]  https://repo.vitexsoftware.cz  $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
+wget -qO- https://repo.vitexsoftware.com/keyring.gpg | sudo tee /etc/apt/trusted.gpg.d/vitexsoftware.gpg
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/vitexsoftware.gpg]  https://repo.vitexsoftware.com  $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
 sudo apt update
 sudo apt install daily
 ```

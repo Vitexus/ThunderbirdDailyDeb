@@ -1,4 +1,10 @@
-thunderbird-daily (124.0a1+) UNRELEASED; urgency=medium
+thunderbird-daily (135.0a1+) UNRELEASED; urgency=medium
+
+  * xz used
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 11 Dec 2024 11:59:55 +0100
+
+thunderbird-daily (124.0a1+) experimental; urgency=medium
 
   [ CyberVitexus ]
   * Jenkinsfile added
@@ -8,7 +14,7 @@ thunderbird-daily (124.0a1+) UNRELEASED; urgency=medium
   * Print version as jenkins build test
   * v124.0a1+
 
- -- vitex <info@vitexsoftware.cz>  Sun, 04 Feb 2024 02:33:04 +0100
+ -- vitex <info@vitexsoftware.cz>  Wed, 11 Dec 2024 11:59:40 +0100
 
 thunderbird-daily (80.0a1) experimental; urgency=medium
 

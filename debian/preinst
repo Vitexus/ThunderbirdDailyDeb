@@ -1,31 +1,31 @@
 #!/bin/sh -e
 DESTDIR="/tmp/daily"
-TMPFILE="/tmp/thunderbird.tar.bz2"
-LANGCODE=`echo $LANG | awk -F_ '{print $1}'`
+TMPFILE="/tmp/thunderbird.tar.xz"
+LANGCODE=$(echo $LANG | awk -F_ '{print $1}')
 
 case $LANGCODE in
-en|es|fy|ga) LANGCODE=`echo $LANG | sed -e 's/_/-/g' | awk -F. '{print $1}'` ;;
+en|es|fy|ga) LANGCODE=$(echo $LANG | sed -e 's/_/-/g' | awk -F. '{print $1}') ;;
 C.UTF-8 ) LANGCODE="en-US" ;;
 *) echo "$LANGCODE" ;;
 esac
 
 echo "Current Language is ⁝$LANG⁝ = ⁝$LANGCODE⁝"
 
-archs=`uname -m`
+archs=$(uname -m)
 case "$archs" in
     i?86) archs="i686" ;;
     x86_64) archs="x86_64" ;;
 #    armel) archs="linuxarmel" ;;
 esac
 
-VERSION=`curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' |  cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1`
+VERSION=$(curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' |  cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1)
 
-wget "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.bz2" -O $TMPFILE
+wget "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.xz" -O $TMPFILE
 cd /tmp
 mkdir -p $DESTDIR
-rm -rf $DESTDIR/*
+rm -rf "$DESTDIR/*"
 ls -l $DESTDIR
-tar xjvf $TMPFILE -C $DESTDIR --strip-components=1
+tar xJvf $TMPFILE -C $DESTDIR --strip-components=1
 rm $TMPFILE
 
 # End of debian/preinst
