@@ -1,8 +1,14 @@
-thunderbird-daily (135.0a1+) UNRELEASED; urgency=medium
+thunderbird-daily (136.0a1+) UNRELEASED; urgency=medium
+
+  * desktop file fix
+
+ -- vitex <info@vitexsoftware.cz>  Fri, 24 Jan 2025 11:13:38 +0100
+
+thunderbird-daily (135.0a1+) experimental; urgency=medium
 
   * xz used
 
- -- vitex <info@vitexsoftware.cz>  Wed, 11 Dec 2024 11:59:55 +0100
+ -- vitex <info@vitexsoftware.cz>  Fri, 24 Jan 2025 11:13:16 +0100
 
 thunderbird-daily (124.0a1+) experimental; urgency=medium
 
