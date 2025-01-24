@@ -12,7 +12,7 @@ Icon=/opt/daily/chrome/icons/default/default128.png
 #Categories=Network;Email;News;GTK;
 # Also don't associate Icedove with the MIME types.
 #MimeType=message/rfc822;x-scheme-handler/mailto;text/calendar;text/x-vcard;
-StartupWMClass=Thunderbird
+StartupWMClass=thunderbird-nightly
 StartupNotify=true
 Name[ast]=Veceru de corréu Icedove -> Thunderbird
 Name[ca]=Client de correu Icedove -> Thunderbird
