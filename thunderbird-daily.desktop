@@ -2,17 +2,17 @@
 Name=Thunderbird
 Comment=Read/Write Mail/News with Thunderbird
 GenericName=Mail Client
-Exec=/opt/thunderbird/thunderbird %u
+Exec=/opt/daily/thunderbird %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
 Version=1.0
-Icon=thunderbird
+Icon=/opt/daily/chrome/icons/default/default128.png
 # Don't show up this (transitional) desktop file in the Categories.
 #Categories=Network;Email;News;GTK;
 # Also don't associate Icedove with the MIME types.
 #MimeType=message/rfc822;x-scheme-handler/mailto;text/calendar;text/x-vcard;
-StartupWMClass=Thunderbird
+StartupWMClass=thunderbird-nightly
 StartupNotify=true
 Name[ast]=Veceru de corréu Icedove -> Thunderbird
 Name[ca]=Client de correu Icedove -> Thunderbird
