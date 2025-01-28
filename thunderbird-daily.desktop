@@ -115,3 +115,13 @@ Keywords[sk]=Email;E-mail;Elektronická pošta;Diskusné skupiny;Čítačka kan�
 Keywords[uk]=Email;E-mail;Newsgroup;Feed;RSS;пошта;новини;подачі;стрічка
 Keywords[vi]=Mail;E-Mail;Email;Newsgroup;Feed;RSS;Thư điện tử;Gửi thư
 Keywords[zh_CN]=Mail;E-Mail;Email;Newsgroup;Feed;RSS;电子;邮件;新闻;Thunderbird;tb;雷鸟;电邮;邮箱;阅读器;
+
+[Desktop Action Compose]
+Name=Compose New Message
+Name[fr]=Rédiger un nouveau courriel
+Exec=thunderbird -compose
+
+[Desktop Action Contacts]
+Name=Contacts
+Name[fr]=Carnet d'adresses
+Exec=thunderbird -addressbook
