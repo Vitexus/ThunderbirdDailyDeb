@@ -21,9 +21,20 @@ jobs:
         DEBFULLNAME: Vítězslav Dvořák
         DEBEMAIL: info@vitexsoftware.cz
         LANG: C.UTF-8
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.sha }}
+        release_name: Release ${{ github.sha }}
+        draft: false
+        prerelease: false
     - name: github-action-publish-binaries
       uses: skx/github-action-publish-binaries@release-0.14
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         args: '*.deb'
+        release_id: ${{ steps.create_release.outputs.id }}
