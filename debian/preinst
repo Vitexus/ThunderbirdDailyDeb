@@ -7,27 +7,33 @@ LANGCODE=$(echo "$LANG" | awk -F_ '{print $1}')
 
 SUPPORTED_LANGCODES="af ar ast be bg br ca cak cs cy da de dsb el en-CA en-GB en-US es-AR es-ES es-MX et eu fi fr fy-NL ga-IE gd gl he hr hsb hu hy-AM id is it ja ka kab kk ko lt lv mk ms nb-NO nl nn-NO pa-IN pl pt-BR pt-PT rm ro ru sk sl sq sr sv-SE th tr uk uz vi zh-CN zh-TW"
 
-case $LANGCODE in
-en|es|fy|ga) LANGCODE=$(echo "$LANG" | sed -e 's/_/-/g' | awk -F. '{print $1}') ;;
-C.UTF-8 ) LANGCODE="en-US" ;;
-*)
-    if [[ ! " $SUPPORTED_LANGCODES " =~ " $LANGCODE " ]]; then
-        echo "Unsupported language ⁝$LANGCODE⁝ - using en-US"
-        LANGCODE="en-US"
-    fi
-    ;;
-esac
+if [ -z "$LANG" ]; then
+    LANGCODE="en-US"
+else
+
+    case $LANGCODE in
+    en | es | fy | ga) LANGCODE=$(echo "$LANG" | sed -e 's/_/-/g' | awk -F. '{print $1}') ;;
+    C.UTF-8) LANGCODE="en-US" ;;
+    *)
+        if [[ ! " $SUPPORTED_LANGCODES " =~ " $LANGCODE " ]]; then
+            echo "Unsupported language ⁝$LANGCODE⁝ - using en-US"
+            LANGCODE="en-US"
+        fi
+        ;;
+    esac
+
+fi
 
 echo "Current Language is ⁝$LANG⁝ → ⁝$LANGCODE⁝"
 
 archs=$(uname -m)
 case "$archs" in
-    i?86) archs="i686" ;;
-    x86_64) archs="x86_64" ;;
+i?86) archs="i686" ;;
+x86_64) archs="x86_64" ;;
 #    armel) archs="linuxarmel" ;;
 esac
 
-VERSION=$(curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' |  cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1)
+VERSION=$(curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' | cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1)
 
 wget -q "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.xz" -O $TMPFILE
 cd /tmp
@@ -38,4 +44,3 @@ tar xJf $TMPFILE -C $DESTDIR --strip-components=1
 rm $TMPFILE
 
 # End of debian/preinst
-
