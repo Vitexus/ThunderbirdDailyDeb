@@ -22,7 +22,6 @@ wget -q "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10
 cd /tmp
 mkdir -p $DESTDIR
 rm -rf "$DESTDIR/*"
-ls -l $DESTDIR
 tar xJf $TMPFILE -C $DESTDIR --strip-components=1
 rm $TMPFILE
 
