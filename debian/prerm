@@ -2,4 +2,5 @@
 
 if [ "$1" = "remove" ]; then
     rm -rf /opt/thunderbird
+    rm /usr/share/applications/thunderbird-daily.desktop
 fi

@@ -2,6 +2,9 @@
 
 if [ "$1" = "remove" ]; then
     dpkg-divert --package daily --rename --remove /usr/bin/daily
+    if [ -f /usr/bin/xdg-desktop-menu ]; then
+        xdg-desktop-menu uninstall /usr/share/applications/thunderbird-daily.desktop > /dev/null || true
+    fi
 fi
 
 
