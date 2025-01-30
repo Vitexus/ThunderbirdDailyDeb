@@ -38,7 +38,7 @@ esac
 
 VERSION=$(curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' | cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1)
 
-wget -q "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.xz" -O $TMPFILE
+curl -s "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.xz" -o $TMPFILE
 cd /tmp
 mkdir -p $DESTDIR
 tar xJf $TMPFILE -C $DESTDIR --strip-components=1
