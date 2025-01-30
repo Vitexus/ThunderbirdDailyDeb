@@ -3,6 +3,9 @@ DESTDIR="/tmp/daily"
 TMPFILE="/tmp/thunderbird.tar.xz"
 LANGCODE=$(echo "$LANG" | awk -F_ '{print $1}')
 
+rm -rf "$DESTDIR"
+rm -rf "$TMPFILE"
+
 #Obtain Langcodes available: links -dump https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep linux | awk '{print $2}' | grep -v asc | grep -v mar | grep -v checksums | awk -F. '{print $3}' | sort | uniq
 
 SUPPORTED_LANGCODES="af ar ast be bg br ca cak cs cy da de dsb el en-CA en-GB en-US es-AR es-ES es-MX et eu fi fr fy-NL ga-IE gd gl he hr hsb hu hy-AM id is it ja ka kab kk ko lt lv mk ms nb-NO nl nn-NO pa-IN pl pt-BR pt-PT rm ro ru sk sl sq sr sv-SE th tr uk uz vi zh-CN zh-TW"
@@ -35,11 +38,9 @@ esac
 
 VERSION=$(curl -s https://archive.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/ | grep /pub/thunderbird/nightly/latest-comm-central-l10n | awk -F'"' '{print $2}' | cut -c 63- | awk -F. '{ print $1 "." $2 }' | tail -n 1)
 
-wget -q "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.xz" -O $TMPFILE
+curl -s "https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/thunderbird-${VERSION}.${LANGCODE}.linux-${archs}.tar.xz" -o $TMPFILE
 cd /tmp
 mkdir -p $DESTDIR
-rm -rf "$DESTDIR/*"
-ls -l $DESTDIR
 tar xJf $TMPFILE -C $DESTDIR --strip-components=1
 rm $TMPFILE
 
