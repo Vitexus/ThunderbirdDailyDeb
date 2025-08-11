@@ -14,7 +14,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Build Debian package
       uses: dawidd6/action-debian-package@v1.6.0
       env:
