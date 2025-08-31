@@ -2,6 +2,7 @@ Source: thunderbird-daily
 Section: web
 Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends: debhelper-compat (= 12)
 Uploaders: Vitex <vitex@hippy.cz>
 Homepage: https://github.com/Vitexus/ThunderbirdDailyDeb
 Standards-Version: 3.9.2
