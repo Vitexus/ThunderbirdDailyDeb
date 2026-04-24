@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v5
     - name: Build Debian package
-      uses: dawidd6/action-debian-package@v1.6.0
+      uses: dawidd6/action-debian-package@v5
       env:
         DEBFULLNAME: Vítězslav Dvořák
         DEBEMAIL: info@vitexsoftware.cz
