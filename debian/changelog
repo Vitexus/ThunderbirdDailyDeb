@@ -1,3 +1,11 @@
+thunderbird-daily (152.0a1+) experimental; urgency=medium
+
+  * AppStream metadata integration
+  * Application icons with multiple resolutions (16-256px)
+  * Desktop integration improvements
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 23 Apr 2026 00:00:00 +0100
+
 thunderbird-daily (136.0a1+) UNRELEASED; urgency=medium
 
   * desktop file fix

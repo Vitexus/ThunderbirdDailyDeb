@@ -14,14 +14,28 @@
     </p>
   </description>
   
+  <icon type="local">/usr/share/icons/hicolor/256x256/apps/thunderbird-daily.png</icon>
+  <icon type="remote">https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/daily.png</icon>
+  
   <launchable type="desktop-id">daily.desktop</launchable>
+  
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/daily.png</image>
+      <image type="source">https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/daily.png</image>
+      <caption>Thunderbird Daily email client</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/thunderbird-daily-about.png</image>
+      <image type="source">https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/thunderbird-daily-about.png</image>
+      <caption>About dialog</caption>
     </screenshot>
   </screenshots>
+  
+  <url type="homepage">https://www.thunderbird.net/</url>
+  <url type="bugtracker">https://github.com/Vitexus/ThunderbirdDailyDeb/issues</url>
+  
+  <content_rating type="oars-1.1" />
+  
+  <releases>
+    <release version="1.0" date="2024-01-01" />
+  </releases>
 </component>
-

@@ -5,6 +5,13 @@ Thunderbird daily installer package for Debian / Ubuntu
 
 Thunderbird Nightly gets a new version every day and as a consequence, the release notes for the Nightly channel are updated continuously to reflect features that have reached sufficient maturity to benefit from community feedback and bug reports. Features listed here may or may not make a final release of Thunderbird.
 
+Features
+--------
+
+- **AppStream Metadata**: Full AppStream support for software managers and application catalogues
+- **Application Icons**: Multiple resolutions (16, 32, 48, 64, 128, 256px) for optimal display
+- **Desktop Integration**: Proper desktop file and metadata for Linux desktop environments
+
 Building package
 ----------------
 
@@ -27,7 +34,7 @@ Or you can use repo:
 
 ```shell
 sudo apt install lsb-release wget apt-transport-https bzip2
-wget -qO- https://repo.vitexsoftware.com/keyring.gpg | sudo tee /etc/apt/trusted.gpg.d/vitexsoftware.gpg
+wget -qO- https://repo.vitexsoftware.com/KEY.gpg | sudo tee /etc/apt/trusted.gpg.d/vitexsoftware.gpg
 echo "deb [signed-by=/etc/apt/trusted.gpg.d/vitexsoftware.gpg]  https://repo.vitexsoftware.com  $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
 sudo apt update
 sudo apt install daily
