@@ -14,7 +14,7 @@
     </p>
   </description>
   
-  <icon type="local">/usr/share/icons/hicolor/256x256/apps/thunderbird-daily.png</icon>
+  <icon type="local">/usr/share/icons/hicolor/256x256/apps/daily.png</icon>
   <icon type="remote">https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/daily.png</icon>
   
   <launchable type="desktop-id">daily.desktop</launchable>
