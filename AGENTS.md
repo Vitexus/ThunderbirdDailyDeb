@@ -75,7 +75,7 @@ make
 
 ### Icon Assets
 - Multiple resolution variants for different UI contexts
-- Source PNG available at `/daily.png`
+- Source PNG available at `/daily.png`; installed icon name is `thunderbird-daily` (matches `Icon=` and the AppStream stock icon)
 - Installed to standard hicolor theme locations
 
 ### Package Lifecycle

@@ -1,41 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.vitexus.thunderbird_daily</id>
-  
+
   <name>Thunderbird Daily</name>
-  <summary>Still Fresh editon of well known email client</summary>
-  
-  <metadata_license>FTL</metadata_license>
-  <project_license>MPL-1.0</project_license>
-  
+  <summary>Daily (nightly) build of the Thunderbird email client</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MPL-2.0</project_license>
+  <developer id="com.vitexsoftware">
+    <name>Vitex Software</name>
+  </developer>
+
   <description>
     <p>
-      Mailing client by Mozilla
+      Thunderbird Daily installs the latest nightly build of Mozilla Thunderbird
+      alongside the stable release, so you can try upcoming features early.
+    </p>
+    <p>
+      Nightly builds are experimental and may be unstable. Do not rely on them
+      for your only copy of important mail.
     </p>
   </description>
-  
-  <icon type="local">/usr/share/icons/hicolor/256x256/apps/daily.png</icon>
-  <icon type="remote">https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/daily.png</icon>
-  
-  <launchable type="desktop-id">daily.desktop</launchable>
-  
+
+  <icon type="stock">thunderbird-daily</icon>
+
+  <launchable type="desktop-id">thunderbird-daily.desktop</launchable>
+
+  <categories>
+    <category>Network</category>
+    <category>Email</category>
+  </categories>
+
+  <provides>
+    <binary>thunderbird-daily</binary>
+  </provides>
+
   <screenshots>
     <screenshot type="default">
-      <image type="source">https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/daily.png</image>
-      <caption>Thunderbird Daily email client</caption>
-    </screenshot>
-    <screenshot>
       <image type="source">https://raw.githubusercontent.com/Vitexus/ThunderbirdDailyDeb/main/thunderbird-daily-about.png</image>
       <caption>About dialog</caption>
     </screenshot>
   </screenshots>
-  
+
   <url type="homepage">https://www.thunderbird.net/</url>
   <url type="bugtracker">https://github.com/Vitexus/ThunderbirdDailyDeb/issues</url>
-  
+  <url type="vcs-browser">https://github.com/Vitexus/ThunderbirdDailyDeb</url>
+
   <content_rating type="oars-1.1" />
-  
+
   <releases>
-    <release version="1.0" date="2024-01-01" />
+    <release version="152.0a1" date="2026-04-23" />
   </releases>
 </component>
